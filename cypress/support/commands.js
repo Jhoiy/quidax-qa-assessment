@@ -29,3 +29,14 @@
 Cypress.Commands.add('dataCy', (value) => {
     return cy.get(`[data-cy=${value}]`)
   })
+
+Cypress.Commands.add('generateRandomPositiveNumber', () => {
+  const randomPositiveNumber = Math.floor(Math.random() * 100);
+  return cy.wrap(randomPositiveNumber); // Return as a Cypress chainable object
+});
+
+Cypress.Commands.add('generateRandomNegativeNumber', () => {
+  const randomNegativeNumber = -Math.floor(Math.random() * 100);
+  return cy.wrap(randomNegativeNumber); // Return as a Cypress chainable object
+});
+
