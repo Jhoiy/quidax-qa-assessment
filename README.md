@@ -30,25 +30,29 @@ npx cypress run
 quidax-qa-assessment/
 ├── cypress/
 │   ├── e2e/
-│   │   ├── features/
-│   │   │   └── simpleFormDemo.feature
+│   │   ├── input-forms/
+│   │   │   ├── simple-form-demo.cy.js
+│   │   │   ├── select-dropdown-list.cy.js
+│   │   ├── alerts-and-modals/
+│   │   │   ├── bootstrap-alerts.cy.js
+│   │   │   ├── bootstrap-modals.cy.js
 │   ├── fixtures/
+│   │   └── example.json
 │   ├── support/
-│   │   ├── pageObjects/
-│   │   │   └── SimpleFormDemo.js
-│   │   └── step_definitions/
-│   │       └── simpleFormDemo.js
-│   └── plugins/
-│       └── index.js
+│   │   ├── commands.js
+│   │   ├── e2e.js
+│   │   ├── page_objects/
+│   │   │   ├── simpleFormDemo.js
+│   │   │   ├── selectDropdownList.js
+│   │   │   ├── bootstrapAlerts.js
+│   │   │   ├── bootstrapModals.js
 ├── cypress.config.js
 ├── package.json
-└── README.md
+├── README.md
 
 
-cypress/e2e/features/: ``Contains the feature files for BDD.``
 cypress/fixtures/: ``Contains test data files.``
-cypress/support/pageObjects/: ``Contains Page Object Model (POM) classes.``
-cypress/support/step_definitions/: ``Contains step definitions for BDD.``
+cypress/support/page_objects/: ``Contains Page Object Model (POM) classes.``
 cypress/plugins/: ``Contains plugins configuration.``
 cypress.config.js: ``Cypress configuration file.``
 package.json: ``npm configuration file.``
